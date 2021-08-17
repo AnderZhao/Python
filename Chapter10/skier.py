@@ -17,8 +17,10 @@ class SkierClass(pygame.sprite.Sprite):
     def turn(self, direction):
         # load new image and change speed when the skier turns
         self.angle = self.angle + direction
-        if self.angle < -2:  self.angle = -2
-        if self.angle > 2:  self.angle = 2
+        if self.angle < -2:
+            self.angle = -2
+        if self.angle > 2:
+            self.angle = 2
         center = self.rect.center
         self.image = pygame.image.load(skier_images[self.angle])
         self.rect = self.image.get_rect()
